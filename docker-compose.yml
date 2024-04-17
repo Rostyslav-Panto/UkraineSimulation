@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+DIRS="src/ukraine_simulation"
+
+isort --check-only $DIRS
+black --check $DIRS
+flake8 $DIRS
+mypy $DIRS
